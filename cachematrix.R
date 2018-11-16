@@ -29,7 +29,7 @@ cacheSolve <- function(x, ...) {
     return(inv)
   }
   data <- x$get()  ## the matrix x is stored in data
-  inv <- solve(data) ## creates an inverse of the matrix  using the solve function; inverse is assigned to inv
+  inv <- solve(data,...) ## creates an inverse of the matrix  using the solve function; inverse is assigned to inv
   x$setInverse(inv)  ## Sets the inverse of the matrix, by passing the global value of inv to the local versionof inv 
   inv      
 }
